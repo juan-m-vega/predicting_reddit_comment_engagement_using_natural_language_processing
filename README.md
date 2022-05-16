@@ -1,6 +1,6 @@
 ### Problem Statement:
 
-Reddit is a popular social media platform that allows users to post content that other users can interact with by providing feedback and reactions in the form of comments. Some of the content shared within Reddit is more popular than the rest based on the number of comments it receives. 
+Reddit is a popular social media platform that allows users to post content that other users can interact with by providing feedback and reactions in the form of comments. Some of the content shared within Reddit is more popular than the rest based on the number of comments it receives.
 
 [Foundation](https://foundationinc.co/lab/reddit-research/), a content marketing firm, states in a report that Reddit has over 300 million monthly active users, serving as a fertile ground for promoting content in the form of threads and advertisements. From a marketing perspective, it is important to understand what characteristics of a Reddit post can serve as distinguishing factors based on the number of interactions a post generates as measured by the number of comments it receives.
 
@@ -13,6 +13,11 @@ The text data from Reddit posts will be vectorized using several methods such as
 ### Data Collection:
 * Using web-scraping and Selenium, over 10,000 Reddit threads were collected in December, 2021 and early January 2022
 * The following features were collected from Reddit posts: Thread title, time since it was posted, subreddit, whether the post contained a video, whether the post contained an image, and the number of comments
+
+### (Running this project):
+Because the data were collected through web scraping during December 2021, please execute the following notebooks and do **not** execute the /web-scrapping-and-data-collection.ipynb notebook. This notebook was used to collect the data particular to this project. Hence, the project findings are specific to the dataset already collected and stored [here](https://reddit-posts-webscraping.s3.amazonaws.com/web_scrapping_results.csv). The remaining notebooks use the data already collected:
+* text-data-exploratory-data-analysis.ipynb
+* nlp-modeling.ipynb 
 
 ### Exploratory Data Analysis
 
@@ -48,7 +53,7 @@ In this analysis, the best model was the random forest model.
 |K-nearest neighbor | 0.66 ± 0.0077 |0.605 |
 
 ### Results
-* A longer amount of time since a thread was posted increases the odds of a post having a number of comments above the median 
+* A longer amount of time since a thread was posted increases the odds of a post having a number of comments above the median
 * Posts that are framed as questions are 1.3 times more likely to have a number of comments above the median than posts that do are not posed as a question
 * Posts that were posted during a holiday were 1.2 times more likely to have a number of comments above the median than posts that were not posted during a holiday
 * Threads that had the following characteristics tended to be classified as having a number of comments above the median:
